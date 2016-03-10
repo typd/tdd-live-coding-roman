@@ -16,7 +16,7 @@ body {
 
 .reveal {
   font-family: 'Source Sans Pro', Helvetica, sans-serif, "Microsoft YaHei", "微软雅黑";
-  font-size: 38px;
+  font-size: 55px;
   font-weight: normal;
   color: #222; }
 
@@ -44,7 +44,7 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 2.4em; }
+  font-size: 2.2em; }
 
 .reveal h2 {
   font-size: 1.8em; }
