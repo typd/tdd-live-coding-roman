@@ -46,16 +46,21 @@ public class ConverterTest extends TestCase {
         assertSame("VIII", 8);
     }
 
-    public void test4and9() {
+    public void testBelowOrEqual10() {
         assertSame("IV", 4);
         assertSame("IX", 9);
     }
 
-    public void test10to13() {
+    public void test10to100() {
         assertSame("X", 10);
         assertSame("XI", 11);
         assertSame("XII", 12);
         assertSame("XIII", 13);
+        assertSame("XIV", 14);
+        assertSame("XV", 15);
+        assertSame("XX", 20);
+        assertSame("L", 50);
+        assertSame("LXV", 65);
     }
 
     private void assertSame(String expect, int roman) {

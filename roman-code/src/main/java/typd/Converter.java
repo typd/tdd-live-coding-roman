@@ -6,22 +6,32 @@ public class Converter {
         if (value <= 0)
             throw new RuntimeException("value should > 0, but now it's: " + value);
         String result = "";
+        int ones = value % 10;
+        int tens = (value % 100) / 10;
+        result += convertSingleDigit(tens, "X", "L", "C");
+        result += convertSingleDigit(ones, "I", "V", "X");
+        return result;
+    }
 
+    private String convertSingleDigit(int singleDigit, String one, String five, String ten) {
+        String result = "";
+        if (singleDigit < 0)
+            throw new RuntimeException("singleDigit should > 0, but now it's: " + singleDigit);
         boolean hasFirstI = false;
-        if ((value - 3) % 5 == 1) {
-            result += "I";
+        if ((singleDigit - 3) % 5 == 1) {
+            result += one;
             hasFirstI = true;
         }
 
-        if (value >= 9)
-            result += "X";
-        else if (value >= 4)
-            result += "V";
+        if (singleDigit >= 9)
+            result += ten;
+        else if (singleDigit >= 4)
+            result += five;
 
         if (!hasFirstI) {
-            int lastIs = (value % 5);
+            int lastIs = (singleDigit % 5);
             for (int i = 1; i <= lastIs; i++) {
-                result += "I";
+                result += one;
             }
         }
         return result;
