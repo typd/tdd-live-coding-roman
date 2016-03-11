@@ -113,22 +113,72 @@
 - Write Code
 - Case pass
 - Refactoring
+- Case pass
+
 - Repeat ...
 
-1 => I
-2 => II
-5 => V
-
+_________
+1 => I case
+fail
+1 => I code
+pass
+_________
+2 => II case
+fail
+2 => II code
+pass
+_________
+5
+5 => V case
+fail
+5 => V code
+pass
+_________
 change assert, to assertResult function
+pass
+_________
+6,7 case
+fail
+6,7 code
+pass
+_________
+refactor
+  see 1-2,5-7 table
+  focus on these 5 cases
+  if > 5, "V", left * "I"
+pass
+_________
+3,8 case
+pass
+_________
+0 case
+error handling?
+fail
+0 code
+pass
+_________
+4,9 case
+fail
+show -1 to 13 table
+mod and handle
+pass
+_________
+10,11,13 case
+pass
+_________
+refactoring, split to digits
+_________
+_________
+is "str" a valid roman numberal?
+_________
+_________
+_________
+_________
+_________
+_________
 
-6 => VI
-7 => VII
 
-show 1 2, and 5 6 7 table
 
-refactor to use value - 5
-
-think of 4 and 9, show big table -1 to 13
 
 -->
 
@@ -239,8 +289,10 @@ think of 4 and 9, show big table -1 to 13
 					<script type="text/template">
 ## 为什么说这些
 
-- 转换思维：左右互搏
+- 需求演变
+- 转换思维
 - 优雅代码
+- Inner peace
 					</script>
 				</section>
 				<section data-markdown>
