@@ -25,6 +25,26 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+<style>
+.roman-table{
+}
+.roman-table tr{
+    border: 0px;
+}
+.roman-table td{
+    padding: 60px 60px 0px 60px;
+    border: 0px;
+    text-align: right;
+    font-size: 1.5em;
+}
+.num-tr td{
+    padding-top:0px;
+    padding-bottom:60px;
+    color:grey;
+    font-size: 1em;
+    text-align: center;
+}
+</style>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -97,20 +117,92 @@
 
 1 => I
 2 => II
-3 => III
+5 => V
+
 change assert, to assertResult function
 
-5 => V
 6 => VI
+7 => VII
 
-similar for 2 and 6?
-  refactor to " += I"
+show 1 2, and 5 6 7 table
 
+refactor to use value - 5
 
+think of 4 and 9, show big table -1 to 13
 
 -->
 
 					</script>
+				</section>
+				<section>
+<table class="roman-table">
+<tr>
+    <td></td>
+    <td>_<span style="color:red">I</span></td>
+    <td>_<span style="color:red">II</span></td>
+</tr>
+<tr class="num-tr">
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+</tr>
+<tr>
+    <td>V</td>
+    <td>V<span style="color:red">I</span></td>
+    <td>V<span style="color:red">II</span></td>
+</tr>
+<tr class="num-tr">
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+</tr>
+</table>
+				</section>
+				<section>
+<table class="roman-table">
+<tr>
+    <td></td>
+    <td></td>
+    <td><span style="color:red">_</span>I</td>
+    <td><span style="color:red">_</span>II</td>
+    <td><span style="color:red">_</span>III</td>
+</tr>
+<tr class="num-tr">
+    <td>-1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+</tr>
+<tr>
+    <td>I<span style="color:red">V</span></td>
+    <td><span style="color:red">V</span></td>
+    <td><span style="color:red">V</span>I</td>
+    <td><span style="color:red">V</span>II</td>
+    <td><span style="color:red">V</span>III</td>
+</tr>
+<tr class="num-tr">
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+</tr>
+<tr>
+    <td>I<span style="color:red">X</span></td>
+    <td><span style="color:red">X</span></td>
+    <td><span style="color:red">X</span>I</td>
+    <td><span style="color:red">X</span>II</td>
+    <td><span style="color:red">X</span>III</td>
+</tr>
+<tr class="num-tr">
+    <td>9</td>
+    <td>10</td>
+    <td>11</td>
+    <td>12</td>
+    <td>13</td>
+</tr>
+</table>
 				</section>
 				<section data-markdown>
 					<script type="text/template">
