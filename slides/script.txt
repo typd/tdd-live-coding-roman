@@ -1,0 +1,112 @@
+- Test Case
+- Case fail
+- Write Code
+- Case pass
+- Refactoring
+- Case pass
+
+- Repeat ...
+
+_________
+1 => I case
+fail
+1 => I code
+pass
+_________
+2 => II case
+fail
+2 => II code
+pass
+_________
+5
+5 => V case
+fail
+5 => V code
+pass
+_________
+change assert, to assertResult function
+pass
+_________
+6,7 case
+fail
+6,7 code
+pass
+_________
+refactor
+  see 1-2,5-7 table
+  focus on these 5 cases
+  if > 5, "V", left * "I"
+pass
+_________
+3,8 case
+pass
+_________
+0,<0 case
+error handling?
+fail
+0 code
+pass
+_________
+use int or Integer?
+change Integer to int
+_________
+4,9 case
+fail
+show -1 to 13 table
+mod and handle
+pass
+_________
+10,11,13 case
+pass
+_________
+refactoring, split to digits
+_________
+add more cases
+14
+19
+20
+40
+99
+100
+101
+499
+500
+501
+999
+1000
+1234
+2016
+3999
+4000
+_________
+summary
+review code
+devide problem into smaller ones
+=========
+convert string roman to int
+write cases 1 to 9
+fail
+_________
+show examples
+split into digits
+show table
+_________
+_________
+_________
+_________
+_________
+_________
+
+
+
+where to start
+    check null
+    confirm test framework is all right, project, debuggable
+where to continue
+    solution to drive to code
+    map
+
+where to skip
+    increase duplication before we can recoginze
+    rule of 3
+    refactoring balance

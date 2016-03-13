@@ -68,31 +68,17 @@
 				</section>
 				<section data-markdown>
 					<script type="text/template">
-## 测试驱动开发 
-
-####Test Driven Development
+## Test Driven Development
 
 <img style="border:0px" src="./img/tdd-circle.png" />
 
 					</script>
 				</section>
-				<section data-markdown>
-					<script type="text/template">
-## Kata
-
-- 演示
-- 编码技巧
-					</script>
-				</section>
                 <section>
-<h2>罗马数字</h2>
+<h2>Kata - Roman numeral</h2>
 
-<ul>
-<li>I, II, III, IV, V, VI, VII, VIII, IX, X, XI...</li>
-<li>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11</li>
-</ul>
+<img style="border:0px;width:800px" src="./img/clock2.jpg" />
 
-<br/>
 <br/>
 <code contenteditable>roman_number = converter.convert(int_value)</code>
 
@@ -105,82 +91,6 @@
 <br/>
 
 <img style="border:0px;width:1000px" src="./img/panda-fight.jpg" />
-
-<!--
-
-- Test Case
-- Case fail
-- Write Code
-- Case pass
-- Refactoring
-- Case pass
-
-- Repeat ...
-
-_________
-1 => I case
-fail
-1 => I code
-pass
-_________
-2 => II case
-fail
-2 => II code
-pass
-_________
-5
-5 => V case
-fail
-5 => V code
-pass
-_________
-change assert, to assertResult function
-pass
-_________
-6,7 case
-fail
-6,7 code
-pass
-_________
-refactor
-  see 1-2,5-7 table
-  focus on these 5 cases
-  if > 5, "V", left * "I"
-pass
-_________
-3,8 case
-pass
-_________
-0 case
-error handling?
-fail
-0 code
-pass
-_________
-4,9 case
-fail
-show -1 to 13 table
-mod and handle
-pass
-_________
-10,11,13 case
-pass
-_________
-refactoring, split to digits
-_________
-_________
-is "str" a valid roman numberal?
-_________
-_________
-_________
-_________
-_________
-_________
-
-
-
-
--->
 
 					</script>
 				</section>
@@ -257,42 +167,139 @@ _________
 				<section data-markdown>
 					<script type="text/template">
 
-## 太简单？
+## See bigger picture
+
+<br/>
 
 - I: 1, V: 5
 - X: 10, L: 50
 - C: 100, D: 500
 - M: 1000
-
-<br/>
-
-- 20: XX
-- 49: XLIX
-- 392: CCCXCII
+  - 25: XXV
+  - 49: XLIX
+  - 392: CCCXCII
+  - 1631: MDCXXXI
 
 					</script>
 				</section>
 				<section data-markdown>
 					<script type="text/template">
-## 其他
+## Code review
 
-- [Roman Numerals in Ruby](https://github.com/RayHightower/romannumerals/blob/master/kata00/lib/romannumeral.rb)
+TODO
+					</script>
+				</section>
+				<section>
+<h2>Roman Numberal in Ruby</h2>
+
+<pre><code data-trim data-noescape>
+class RomanNumeral
+  ROMAN_NUMERALS = {
+        1000 => "M",
+        900 => "CM", 500 => "D", 400 => "CD", 100 => "C",
+        90 => "XC", 50 => "L", 40 => "XL", 10 => "X",
+        9 => "IX", 5 => "V", 4 => "IV", 1 => "I" }
+      
+  def convert(arabic)
+    raise "No smaller than 1" if arabic < 1
+    raise "No larger than 3999" if arabic > 3999
+    
+    result = ""
+    ROMAN_NUMERALS.each do |arabiceq, roman|
+      while arabic >= arabiceq
+       result += roman
+       arabic -= arabiceq
+      end
+    end
+    result
+  end
+end
+</code></pre>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+## What we have learned?
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+## Baby steps
+
+<img style="border:0px;width:1200px" src="./img/baby-steps.png" />
+
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+## Units
+
+<img style="border:0px;width:1200px" src="./img/lego2.jpg" />
+
+<!-- 搬砖，不是搬大石头 -->
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+
+## Minimum viable product
+#### 最小可用产品
+
+<img style="border:0px;width:1000px" src="./img/product.png" />
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+## Path
+
+<img style="border:0px;width:1200px" src="./img/to-rome.jpg" />
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+
+## New way of Thinking
+
+<img style="border:0px;width:1200px" src="./img/fish2.jpg" />
+
+
+<!--
+- 代码
+  - 小步前进
+  - 模块化
+  - 重构的目标，什么时候停止
+- 开发
+  - 最小可用
+- 转换思维
+-->
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+## Summary
+
+- Test Driven Development
+- Kata: Roman numberal
+  - public String convert(int value)
+  - public int convert(String romanNumeral)
+- Learned
+  - Baby steps <span style="font-size:0.6em">小步前进</span>
+  - Units <span style="font-size:0.6em">模块化</span>
+  - Minimum viable product <span style="font-size:0.6em">最小可用</span>
+  - Path <span style="font-size:0.6em">路径</span>
+  - New way of thinking <span style="font-size:0.6em">思维</span>
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+## More
+
 - [codekatas.org](http://www.codekatas.org/)
 - [codekata.com](http://codekata.com/)
 - [The Ultimate code kata](http://blog.codinghorror.com/the-ultimate-code-kata/)
+- [Roman Numerals in Ruby](https://github.com/RayHightower/romannumerals/blob/master/kata00/lib/romannumeral.rb)
 - [Jim Weirick](http://confreaks.tv/presenters/jim-weirich)
-<!-- Jim Weirich Video -->
 
-					</script>
-				</section>
-				<section data-markdown>
-					<script type="text/template">
-## 为什么说这些
-
-- 需求演变
-- 转换思维
-- 优雅代码
-- Inner peace
+bool is_legal?(roman_numeral)
 					</script>
 				</section>
 				<section data-markdown>
