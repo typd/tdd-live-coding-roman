@@ -41,10 +41,9 @@ _________
 3,8 case
 pass
 _________
-0,<0 case
-error handling?
+0,<0 case, error handling?
 fail
-0 code
+<=0 code
 pass
 _________
 use int or Integer?
@@ -58,6 +57,9 @@ pass
 _________
 10,11,13 case
 pass
+_________
+show L C D M, and cases
+ask solution
 _________
 refactoring, split to digits
 _________
