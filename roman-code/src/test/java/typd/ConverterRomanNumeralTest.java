@@ -16,7 +16,7 @@ public class ConverterRomanNumeralTest extends TestCase {
 
     public void testStrAll() {
         for (int i = 1; i <= 3999; i++) {
-            int result = converter.convertRomanNumber(converter.convertRomanNumber(i));
+            int result = converter.convertRomanNumeral(converter.convertRomanNumber(i));
             assertTrue("result: " + result + " should be:" + i, result == i);
         }
     }
