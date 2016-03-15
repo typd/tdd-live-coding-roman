@@ -80,7 +80,7 @@
 <img style="border:0px;width:800px" src="./img/clock2.jpg" />
 
 <br/>
-<code contenteditable>roman_number = converter.convert(int_value)</code>
+<code contenteditable>roman_string = converter.convert(number)</code>
 
 				</section>
 				<section data-markdown>
@@ -182,11 +182,11 @@
 - 49: XLIX
 - 392: CCCXCII
 - 1631: MDCXXXI
+- 3999: MMMCMXCIX
 					</script>
 				</section>
                 <section>
 <h2>Code review</h2>
-
 <pre><code data-trim data-noescape>
 public String convert(int value) {
     if (value <= 0)
@@ -216,7 +216,6 @@ public void test14to100() {...}
 
 public void test101toAbove() {...}
 </code></pre>
-
 				</section>
 				<section>
 <h2>Roman Numberal in Ruby</h2>
@@ -247,30 +246,37 @@ end
 				</section>
 				<section data-markdown>
 					<script type="text/template">
-## What is about TDD?
+## What is about TDD and development?
+#### TDD和开发
 					</script>
 				</section>
 				<section data-markdown>
 					<script type="text/template">
 ## Baby steps
+#### 小步前进
 
-<img style="border:0px;width:1200px" src="./img/baby-steps.png" />
+<img style="border:0px;width:1000px" src="./img/baby-steps.png" />
+
+- Confirm everything is all right
+- Response fast
 
 					</script>
 				</section>
 				<section data-markdown>
 					<script type="text/template">
 ## Units
+#### 模块化
 
-<img style="border:0px;width:1200px" src="./img/lego2.jpg" />
+<img style="border:0px;width:1000px" src="./img/lego2.jpg" />
 
-<!-- 搬砖，不是搬大石头 -->
+- "Fake until you make it"
+- Refactoring, rule of 3
 					</script>
 				</section>
 				<section data-markdown>
 					<script type="text/template">
 
-## Minimum viable product
+## Minimum viable product 
 #### 最小可用产品
 
 <img style="border:0px;width:1000px" src="./img/product.png" />
@@ -279,35 +285,91 @@ end
 				<section data-markdown>
 					<script type="text/template">
 ## Path
+#### 路径
 
-<img style="border:0px;width:1200px" src="./img/to-rome.jpg" />
+<img style="border:0px;width:1000px" src="./img/to-rome.jpg" />
+
+- Correct as you go
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+## New Thinking
+#### 新思考方式
+
+<img style="border:0px;width:1000px" src="./img/fish2.jpg" />
+
+- Result driven, Confidence
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+TDD is a way of writing code
+
+<br/>
+
+#### TDD是一种写代码的方式
+
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+In practice, you never have time after the code is written
+
+but under TDD, you always have the time before
+
+<br/>
+
+#### 通常，代码写好后没时间写测试
+#### 用TDD后，就有时间了
+
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+Tests Are An Extension of Code, first-class citizens
+
+Good test can be good specs
+
+<br/>
+
+#### 测试是代码的“扩展”，是一等公民
+#### 好的测试，也是好的文档
+
 					</script>
 				</section>
 				<section data-markdown>
 					<script type="text/template">
 
-## New Thinking
+Test everything that could possibly break
 
-<img style="border:0px;width:1200px" src="./img/fish2.jpg" />
+don't test things that couldn't possibly break
 
-<!--
--->
+e.g. getters and setters, what you don't trust
+
+<br/>
+
+#### 测试可能出错的，不测那些不会出错的
+#### 例如：getters, setters, 你不确信的
+
+
 					</script>
 				</section>
 				<section data-markdown>
 					<script type="text/template">
 ## Summary
+#### 总结
 
 - Test Driven Development
 - Kata: Roman numberal
   - public String convert(int value)
   - public int convert(String romanNumeral)
-- Learned
+- Summary
   - Baby steps <span style="font-size:0.6em">小步前进</span>
   - Units <span style="font-size:0.6em">模块化</span>
   - Minimum viable product <span style="font-size:0.6em">最小可用</span>
   - Path <span style="font-size:0.6em">路径</span>
-  - New way of thinking <span style="font-size:0.6em">思维</span>
+  - New Thinking <span style="font-size:0.6em">新思考方式</span>
 					</script>
 				</section>
 				<section data-markdown>
@@ -327,7 +389,7 @@ bool is_legal?(roman_numeral)
 					<script type="text/template">
 # Q & A
 
-谢谢
+Xie Xie
 					</script>
 				</section>
 			</div>

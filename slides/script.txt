@@ -93,12 +93,6 @@ show examples
 split into digits
 show table
 _________
-_________
-_________
-_________
-_________
-_________
-
 
 
 where to start
@@ -107,8 +101,49 @@ where to start
 where to continue
     solution to drive to code
     map
-
 where to skip
     increase duplication before we can recoginze
     rule of 3
     refactoring balance
+
+________________
+
+baby steps
+    start to confirm everything is all right
+    response fast
+Unit
+    搬砖 重构 复用
+
+minimum viable product
+    satisfy time
+path
+    where to start not important
+    correct direction
+    fail fast
+    know the whole when you can see
+new thinking
+    don't care about the implementation too much
+    result driven
+    TDD is not writing unit tests, TDD is a way of writing code.
+    Tests can be good documents
+    confidence
+
+In practice, you never have time after the code is written
+but under TDD, you always have the time before
+
+"If you can't write a test, then you don't know what the code should do. And what business do you have writing code in the first place when you can't say what it's supposed to do?" - Rob Mee
+
+Tests Are An Extension of Code
+    Test code is not "wasted" or "extra" -- tests are first-class citizens
+
+Test everything that could possibly break
+    don't test things that couldn't possibly break
+        e.g. Getters and Setters
+        Unless you think they could fail!
+        Better safe than sorry; test what you don't trust
+
+
+
+
+
+
